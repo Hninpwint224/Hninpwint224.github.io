@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Hnin | Bridging Business &amp; Tech</title>
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Inter or similar clean sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF8A3D',
+              dark: '#1A1A1A',
+              grey: '#2D2D2D',
+              lightGrey: '#F5F5F5'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            '4xl': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style data-purpose="custom-animations">
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .float-icon {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Background gradients matching reference */
+    .bg-gradient-hero {
+      background: radial-gradient(circle at center, #FFF5EE 0%, #FFFFFF 100%);
+    }
+
+    .bg-dark-section {
+      background-color: #1A1A1A;
+    }
+
+    .rounded-card {
+      border-radius: 2.5rem;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-brand-dark bg-white">
+  <!-- BEGIN: Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <div
+      class="max-w-7xl mx-auto bg-brand-dark/90 backdrop-blur-md rounded-full px-8 py-3 flex items-center justify-between border border-white/10">
+      <div class="flex items-center gap-2">
+        <div
+          class="w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center font-bold text-white text-xs italic">
+          BA</div>
+        <span class="text-white font-bold tracking-tight">HNIN</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
+        <a class="hover:text-brand-orange transition-colors" href="#home">Home</a>
+        <a class="hover:text-brand-orange transition-colors" href="#services">Services</a>
+        <a class="hover:text-brand-orange transition-colors" href="#experience">Experience</a>
+        <a class="hover:text-brand-orange transition-colors" href="#project">Projects</a>
+        <a class="hover:text-brand-orange transition-colors" href="#contact">Contact</a>
+      </div>
+      <a class="bg-brand-orange text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition-all"
+        href="#hireme">Hire me</a>
+    </div>
+  </nav>
+  <!-- END: Navigation -->
+
+  <!-- BEGIN: Hero Section -->
+  <section class="relative pt-32 px-6 bg-gradient-hero overflow-hidden" id="home">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+      <div
+        class="inline-block bg-white border border-brand-lightGrey px-4 py-1 rounded-full text-base font-semibold mb-6 shadow-sm">
+        Hello! 👋
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+        I'm <span class="text-brand-orange">Hnin Pwint</span>,<br />Business Analyst
+      </h1>
+      <p class="max-w-2xl text-gray-500 mb-5 text-lg">
+        Bridging the gap between business needs and technical solutions. Expert in translating complex requirements into
+        actionable growth strategies.
+      </p>
+      <!-- Profile Image Area -->
+      <div class="relative w-full max-w-2xl">
+        <!-- Circular background element -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-orange-100 rounded-full -z-10">
+        </div>
+        <!-- Main Image -->
+        <img alt="My Profile Image" class="mx-auto relative z-10 w-[200px] md:w-[350px]"
+          src="./img/profile-image.png" />
+        <!-- Floating Badges -->
+        <div
+          class="absolute top-1/4 -left-4 md:-left-12 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3">
+          <div class="text-brand-orange text-2xl font-bold italic">“</div>
+          <div class="text-left">
+            <p class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Professional</p>
+            <p class="text-xs font-bold">Business Analyst</p>
+          </div>
+        </div>
+        <div class="absolute bottom-1/4 -right-4 md:-right-12 bg-white p-4 rounded-2xl shadow-xl z-20 text-center">
+          <div class="flex text-brand-orange mb-1 justify-center">
+            ★★★★★
+          </div>
+          <p class="text-2xl font-black">2 Years</p>
+          <p class="text-[10px] font-bold uppercase text-gray-400">Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: Hero Section -->
+
+  <!-- BEGIN: Services Section -->
+  <section class="bg-brand-dark py-24 px-6 relative overflow-hidden" id="services">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div>
+          <h2 class="text-brand-orange text-4xl md:text-5xl font-bold mb-4">My <span class="text-white">Expertise</span>
+          </h2>
+          <p class="text-gray-400">Specialized analytical services designed to streamline operations and drive
+            data-backed decision making.</p>
+        </div>
+        <div class="flex gap-2">
+          <div class="w-3 h-3 rounded-full bg-brand-orange"></div>
+          <div class="w-3 h-3 rounded-full bg-brand-orange"></div>
+          <div class="w-3 h-3 rounded-full bg-brand-orange"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div
+          class="bg-brand-grey p-8 rounded-card border border-white/5 group hover:border-brand-orange/50 transition-all">
+          <div
+            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange transition-colors">
+            <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" stroke="currentColor"
+              viewbox="0 0 24 24">
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="text-white text-2xl font-bold mb-4">Requirements Analysis</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Bridging gaps through detailed functional and
+            non-functional requirement documentation and management.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div
+          class="bg-brand-grey p-8 rounded-card border border-white/5 group hover:border-brand-orange/50 transition-all">
+          <div
+            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange transition-colors">
+            <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" stroke="currentColor"
+              viewbox="0 0 24 24">
+              <path
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="text-white text-2xl font-bold mb-4">Business Analysis</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Maximize project success by translating complex business
+            requirements into actionable design strategies that drive measurable growth.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="bg-brand-grey p-8 rounded-card border border-white/5 group hover:border-brand-orange/50 transition-all">
+          <div
+            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange transition-colors">
+            <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" stroke="currentColor"
+              viewbox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-white text-2xl font-bold mb-4">Quality Assurance</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Guarantee a flawless user experience by performing
+            rigorous visual audits and functional testing to ensure perfect delivery across all devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: Services Section -->
+
+  <!-- BEGIN: Experience Section -->
+  <section class="py-24 px-6 bg-white" id="experience">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-center text-4xl md:text-5xl font-bold mb-20">My <span class="text-brand-orange">Work
+          Experience</span></h2>
+      <div class="relative">
+        <!-- Center Line -->
+        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px border-l-2 border-dashed border-gray-200">
+        </div>
+        <!-- Item 1 -->
+        <div class="relative flex items-center justify-between mb-20">
+          <div class="w-5/12 text-right pr-12">
+            <h3 class="text-xl font-bold">BIM Group of Companies</h3>
+            <p class="text-brand-orange text-sm font-semibold">Oct 2025 - Present</p>
+          </div>
+          <div
+            class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center z-10">
+            <div class="w-3 h-3 bg-brand-orange rounded-full"></div>
+          </div>
+          <div class="w-5/12 pl-12">
+            <h3 class="text-xl font-bold">Mid-Senior Business Analyst</h3>
+            <p class="text-gray-500 text-sm mt-2">Lead requirement gathering sessions with key stakeholders to define,
+              analyze, and document business and functional requirements. Oversee multiple projects simultaneously,
+              ensuring alignment with organizational goals and delivery within scope and timeline.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative flex items-center justify-between mb-20">
+          <div class="w-5/12 text-right pr-12">
+            <h3 class="text-xl font-bold">BIM Group of Companies</h3>
+            <p class="text-brand-orange text-sm font-semibold">Aug 2024 - Oct 2025</p>
+          </div>
+          <div
+            class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-2 border-brand-dark rounded-full flex items-center justify-center z-10">
+            <div class="w-3 h-3 bg-brand-dark rounded-full"></div>
+          </div>
+          <div class="w-5/12 pl-12">
+            <h3 class="text-xl font-bold">Junior Business Analyst</h3>
+            <p class="text-gray-500 text-sm mt-2">Conduct meetings with stakeholders to gather and understand
+              requirements. Consult with developers and stakeholders to ensure better project deliverables. Perform
+              Quality Assurance (QA) testing to ensure that the developed solutions align with the business requirements
+              and function correctly.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="relative flex items-center justify-between">
+          <div class="w-5/12 text-right pr-12">
+            <h3 class="text-xl font-bold">BIM Group of Companies</h3>
+            <p class="text-brand-orange text-sm font-semibold">May 2024 - Jul 2024</p>
+          </div>
+          <div
+            class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center z-10">
+            <div class="w-3 h-3 bg-brand-orange rounded-full"></div>
+          </div>
+          <div class="w-5/12 pl-12">
+            <h3 class="text-xl font-bold">Power Platform Intern</h3>
+            <p class="text-gray-500 text-sm mt-2">Participated in testing and troubleshooting to ensure app
+              functionality and performance. Collaborated with cross-functional teams including Power BI developers,
+              Business Analysts, and Project Managers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: Experience Section -->
+
+  <!-- BEGIN: Why Hire Me Section -->
+  <section class="bg-brand-lightGrey py-24 px-6 overflow-hidden" id="hireme">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <div class="md:w-1/2 relative">
+        <div class="w-full aspect-square bg-white rounded-card shadow-2xl overflow-hidden relative">
+          <img alt="Working" class="w-full h-full object-cover" src="./img/profile-image-2.jpg" />
+          <div class="absolute inset-0 bg-brand-orange/10"></div>
+        </div>
+        <!-- Decorative dots -->
+        <div
+          class="absolute -top-6 -right-6 w-32 h-32 opacity-20 bg-[radial-gradient(#FF8A3D_2px,transparent_1px)] [background-size:16px_16px]">
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Why <span class="text-brand-orange">Hire me?</span></h2>
+        <p class="text-gray-500 mb-8 text-lg">My hybrid
+          background in business strategy and technology allows me to speak both languages fluently.</p>
+
+        <div class="grid grid-cols-2 gap-8 mb-10">
+          <div>
+            <p class="text-4xl font-black text-brand-dark">10+</p>
+            <p class="text-sm font-bold text-gray-400 uppercase">Requirements Managed</p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-black text-brand-dark">5+</p>
+            <p class="text-sm font-bold text-gray-400 uppercase">Large-scale Projects</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-10">
+          <span class="bg-white px-4 py-2 rounded-full text-sm font-bold border border-gray-100 shadow-sm">Requirement
+            Analysis</span>
+          <span class="bg-white px-4 py-2 rounded-full text-sm font-bold border border-gray-100 shadow-sm">Business
+            Analysis</span>
+          <span class="bg-white px-4 py-2 rounded-full text-sm font-bold border border-gray-100 shadow-sm">Quality
+            Assurance</span>
+          <span class="bg-white px-4 py-2 rounded-full text-sm font-bold border border-gray-100 shadow-sm">Jira &amp;
+            Miro</span>
+        </div>
+        <a class="inline-block bg-white text-brand-dark border-2 border-brand-dark px-10 py-4 rounded-full font-bold hover:bg-brand-dark hover:text-white transition-all"
+          href="./HninPwintPhyuAung_Resume.pdf" target="_blank">
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END: Why Hire Me Section -->
+
+  <!-- BEGIN: Project Section -->
+  <section class="py-24 px-6 bg-white" id="project">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's have a look at<br />my <span
+            class="text-brand-orange">Projects</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Project 1 -->
+        <div class="group">
+          <div class="rounded-card overflow-hidden bg-brand-lightGrey mb-6 relative aspect-video">
+            <img alt="ERP Implementation"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0c3XPqjhoEPUZiZy9z2gIA5LDOd-viNfzSL2_lDTgKjGtVtxAK0pa0oABJgkNburICbh3n0_zRn3RRn0MmCmHTQ2qq-gd2AHz3yKlYCxrFZ_xfUcQSwYKSQ-JIPj-8_2Q4WcpEyAwziqMO7v-O2rsoNR0XjZydHk0FX5SheDMij1_5qOaMaKY1cAN7MVxf6YPwExqjKcSODZSIYxxSsgwa-GnVhvWAUbJ_PoX8jc800XtaDgKf_zCZygfEZNY94FDwAdztmp51v2A" />
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Omnichannel ERP Implementation</h3>
+              <p class="text-gray-500">Full lifecycle management for a global e-commerce platform migration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group">
+          <div class="rounded-card overflow-hidden bg-brand-lightGrey mb-6 relative aspect-video">
+            <img alt="Data Viz"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-oeWlAcMDJ135Uv1XEyACVoEvla6jwDEI19Ku0mfSdHkPZnSvJhDVF8lLWvvSPdz-orP6mIs6yTtfBHDV8uV_MIjOMD40BG_A1u946tGURfiMSso27Al3IoC-NzCCqoyOB21ycbZfjCpupInIS11vIVr1iQkLS4cz62BJVFUHHiwO8chHtL0ztQNfem28Jca8o-2ydzA2DB7G_XKTKuk_ZnNrDQVl32JE_IYaHFMjlnUGdma9wRnW0I59Nz_GeTeid2obps6vflMh" />
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Real-time Supply Chain Dashboard</h3>
+              <p class="text-gray-500">Reducing procurement lag by 22% using Power BI and custom SQL queries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: Project Section -->
+
+  <!-- BEGIN: Contact Section -->
+  <section class="py-24 px-6 bg-white" id="contact">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-8">Have an Awesome Project<br />Idea? <span
+          class="text-brand-orange">Let's Discuss</span></h2>
+
+      <div
+        class="mt-12 bg-brand-lightGrey p-4 rounded-full flex items-center gap-2 max-w-xl mx-auto border border-gray-100 shadow-inner">
+        <div class="pl-6 text-gray-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <input class="bg-transparent border-none focus:ring-0 flex-grow text-sm font-medium" placeholder="Send Email"
+          type="email" disabled />
+        <a href="mailto:hninpwint.pa@gmail.com"
+          class="bg-brand-orange text-white px-10 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors">Send</a>
+      </div>
+    </div>
+  </section>
+  <!-- END: Contact Section -->
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-brand-dark text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+        <div class="md:w-1/2">
+          <div class="flex items-center gap-2 mb-6">
+            <div
+              class="w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center font-bold text-white text-xs italic">
+              BA</div>
+
+            <span class="text-white font-bold tracking-tight text-xl">HNIN</span>
+          </div>
+
+          <p class="text-gray-400 leading-relaxed mb-8">
+            Expert Mid-Senior Business Analyst focused on delivering high-impact solutions and driving operational
+            excellence through analysis and strategy.
+          </p>
+
+          <div class="flex gap-5">
+            <a class="w-10 h-10 p-[2px] rounded-full bg-white flex items-center justify-center hover:bg-brand-orange transition-colors"
+              href="https://www.linkedin.com/in/hnin-pwint-phyu-aung/" target="_blank">
+              <img src="./img/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a class="w-10 h-10 p-[2px] rounded-full bg-white flex items-center justify-center hover:bg-brand-orange transition-colors"
+              href="https://github.com/Hninpwint224" target="_blank">
+              <img src="./img/github.png" alt="GitHub Icon">
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 md:w-1/2">
+          <div>
+            <h5 class="font-bold mb-6 text-brand-orange uppercase text-xs tracking-widest">Navigation</h5>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li><a class="hover:text-white transition-colors" href="#home">Home</a></li>
+              <li><a class="hover:text-white transition-colors" href="#services">Services</a></li>
+              <li><a class="hover:text-white transition-colors" href="#experience">Experience</a></li>
+              <li><a class="hover:text-white transition-colors" href="#project">Projects</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-bold mb-6 text-brand-orange uppercase text-xs tracking-widest">Contact</h5>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li>+66 936135501</li>
+              <li>hninpwint.pa@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+</body>
+
+</html>
